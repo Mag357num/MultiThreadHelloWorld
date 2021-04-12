@@ -7,7 +7,7 @@ std::mutex mtx;
 std::condition_variable cv;
 
 int cargo = 0;
-bool shipment_available()
+bool HasCargo()
 {
 	return cargo != 0;
 }
@@ -17,7 +17,7 @@ void consume(int n)
 {
 	for (int i = 0; i < n; ++i) {
 		std::unique_lock <std::mutex> lck(mtx);
-		cv.wait(lck, shipment_available);
+		cv.wait(lck, HasCargo);
 		std::cout << cargo << '\n';
 		cargo = 0;
 	}
@@ -29,7 +29,7 @@ int main()
 
 	// 主线程为生产者线程, 生产 10 个物品.
 	for (int i = 0; i < 10; ++i) {
-		while (shipment_available())
+		while (HasCargo())
 			std::this_thread::yield();
 		std::unique_lock <std::mutex> lck(mtx);
 		cargo = i + 1;
