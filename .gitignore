@@ -1,0 +1,12 @@
+MultiThreadHelloWorld/.vs
+*.pdb
+*.tlog
+*.obj
+*.recipe
+*.ilk
+*.log
+*.idb
+*.pch
+*.pdb
+*.exe
+*.pdb

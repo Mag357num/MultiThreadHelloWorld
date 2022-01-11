@@ -37,6 +37,6 @@ int main()
 
 	for (auto& th : threads)
 		th.join();
-
+	getchar();
 	return 0;
 }
