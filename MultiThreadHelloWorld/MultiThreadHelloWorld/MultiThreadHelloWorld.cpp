@@ -27,9 +27,9 @@ int main()
 	background_task f;
 	std::thread my_thread2( f ); // 创建子线程方式2, 用一个Callable可调用的对象
 
-	//等待线程结束
-	//如果不等待子线程结束, 会报错"abort() has been called", 子线程使用的资源都随着主线程结束消失了
-	//如果不等待线程，就必须保证线程结束之前，可访问的数据得有效性
+	// 等待线程结束
+	// 如果不等待子线程结束, 会报错"abort() has been called", 子线程使用的资源都随着主线程结束消失了
+	// 如果不等待线程，就必须保证线程结束之前，可访问的数据得有效性
 	//my_thread0.join(); // error: 不能join一个没有开始的线程
 	my_thread1.join(); // 加入式
 	my_thread2.join(); // 分离式
