@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31112.23
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinAPIMultiThread", "WinAPIMultiThread\WinAPIMultiThread.vcxproj", "{BEE74C76-3BC2-4C6E-9520-EA085851AFD7}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StdMultiThread_conditionVariable2", "StdMultiThread_conditionVariable\StdMultiThread_conditionVariable.vcxproj", "{72C012A7-5BBE-4FAA-8B99-3661466A2D43}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StdMultiThread_conditionVariable1", "StdMultiThread_conditionVariable1\StdMultiThread_conditionVariable1.vcxproj", "{DB0FF9AC-85A6-4F63-A875-AA07131036C0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MultiThreadHelloWorld", "MultiThreadHelloWorld\MultiThreadHelloWorld.vcxproj", "{6A8CF457-1040-457F-9FA4-FC29D1408E01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,14 @@ Global
 		{DB0FF9AC-85A6-4F63-A875-AA07131036C0}.Release|x64.Build.0 = Release|x64
 		{DB0FF9AC-85A6-4F63-A875-AA07131036C0}.Release|x86.ActiveCfg = Release|Win32
 		{DB0FF9AC-85A6-4F63-A875-AA07131036C0}.Release|x86.Build.0 = Release|Win32
+		{6A8CF457-1040-457F-9FA4-FC29D1408E01}.Debug|x64.ActiveCfg = Debug|x64
+		{6A8CF457-1040-457F-9FA4-FC29D1408E01}.Debug|x64.Build.0 = Debug|x64
+		{6A8CF457-1040-457F-9FA4-FC29D1408E01}.Debug|x86.ActiveCfg = Debug|Win32
+		{6A8CF457-1040-457F-9FA4-FC29D1408E01}.Debug|x86.Build.0 = Debug|Win32
+		{6A8CF457-1040-457F-9FA4-FC29D1408E01}.Release|x64.ActiveCfg = Release|x64
+		{6A8CF457-1040-457F-9FA4-FC29D1408E01}.Release|x64.Build.0 = Release|x64
+		{6A8CF457-1040-457F-9FA4-FC29D1408E01}.Release|x86.ActiveCfg = Release|Win32
+		{6A8CF457-1040-457F-9FA4-FC29D1408E01}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
