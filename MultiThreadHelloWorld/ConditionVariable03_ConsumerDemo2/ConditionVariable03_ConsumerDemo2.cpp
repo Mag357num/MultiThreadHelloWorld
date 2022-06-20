@@ -9,14 +9,11 @@ using namespace std;
 //缓冲区存储的数据类型 
 struct CacheData
 {
-    //商品id 
-    int id;
-    //商品属性 
-    string data;
+    int id; //商品id
+    string data; //商品属性
 };
 
-queue<CacheData> Q;
-//缓冲区最大空间 
+queue<CacheData> Q; //缓冲区最大空间
 const int MAX_CACHEDATA_LENGTH = 10;
 //互斥量，生产者之间，消费者之间，生产者和消费者之间，同时都只能一个线程访问缓冲区 
 mutex m;
