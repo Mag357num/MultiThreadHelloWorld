@@ -51,12 +51,12 @@ void ProducerActor()
 {
     unique_lock<mutex> lockerProducer( m );
     cout << "[" << this_thread::get_id() << "] 获取了锁" << endl;
-    while (Q.size() > MAX_CACHEDATA_LENGTH)
+    while (Q.size() > MAX_CACHEDATA_LENGTH) // 条件变量对应的条件.
     {
         cout << "因为队列为满，所以生产者Sleep" << endl;
         cout << "[" << this_thread::get_id() << "] 不再持有锁" << endl;
         //对列慢，生产者停止，等待消费者唤醒 
-        condProducer.wait( lockerProducer );
+        condProducer.wait( lockerProducer ); // 这里也可以去掉上面的while, 换成用wait(locker，Predicate)这个函数
         cout << "[" << this_thread::get_id() << "] Weak, 重新获取了锁" << endl;
     }
     cout << "[" << this_thread::get_id() << "] ";
