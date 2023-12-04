@@ -36,6 +36,7 @@ int main()
 	}
 	std::cout << "10 threads ready to race...\n";
 
+	getchar(); // 等待go
 	go(); // go!
 
 	for (auto& th : threads)
